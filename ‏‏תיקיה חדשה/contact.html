@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kat - צור קשר</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="logo" style="text-decoration:none;"><img src="images/logo.png" alt="Kat" style="height:42px;width:auto;"></a>
+        <button class="nav-toggle" aria-label="תפריט" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+        <ul class="nav-links">
+            <li><a href="index.html">בית</a></li>
+            <li><a href="articles.html">מאמרים</a></li>
+            <li><a href="about.html">אודות</a></li>
+            <li><a href="order.html">הזמנה</a></li>
+            <li><a href="contact.html" class="active">צור קשר</a></li>
+            <li><a href="policies.html">מדיניות</a></li>
+            <li><a href="privacy.html">פרטיות</a></li>
+            <li><a href="disclaimer.html">הגבלת אחריות</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <h1>צור קשר</h1>
+        <p>אנחנו כאן כדי לעזור. הודע לנו איך נוכל לסייע</p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section">
+    <div class="container contact-container">
+        
+        <!-- Contact Form -->
+        <div class="contact-form-box">
+            <h2>שלח לנו הודעה</h2>
+            <form class="contact-form" onsubmit="submitForm(event)">
+                
+                <div class="form-group">
+                    <label for="name">שם</label>
+                    <input type="text" id="name" name="name" required placeholder="שמך המלא">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">אימייל</label>
+                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">טלפון</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+972-50-1234567">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">נושא</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">בחר נושא</option>
+                        <option value="order">שאלה על הזמנה</option>
+                        <option value="technical">בעיה טכנית</option>
+                        <option value="feedback">משוב או הצעה</option>
+                        <option value="complaint">תלונה או בעיה</option>
+                        <option value="partnership">שותפות או שיתוף פעולה</option>
+                        <option value="other">אחר</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">הודעה</label>
+                    <textarea id="message" name="message" rows="6" required placeholder="כתוב את ההודעה שלך כאן..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-large" style="width: 100%;">
+                    ✉️ שלח הודעה
+                </button>
+
+            </form>
+            <p style="font-size: 12px; color: #b0b0b0; margin-top: 1rem; text-align: center;">
+                אנחנו בדרך כלל מגיבים תוך 24 שעות
+            </p>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info-box">
+            <h2>פרטי קשר</h2>
+
+            <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div class="contact-detail">
+                    <h4>אימייל</h4>
+                    <p><a href="mailto:kat.orders.il@gmail.com">kat.orders.il@gmail.com</a></p>
+                    <p style="font-size: 12px; color: #b0b0b0;">מייל סופי יעודכן בקרוב · תשובה בתוך 24 שעות</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div class="contact-detail">
+                    <h4>כתובת למשלוח דואר</h4>
+                    <p>נחל דישון 32, דירה 5</p>
+                    <p style="font-size: 12px; color: #b0b0b0;">ישראל</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">🕐</div>
+                <div class="contact-detail">
+                    <h4>שעות פעילות</h4>
+                    <p>ראשון-חמישי: 09:00-18:00</p>
+                    <p style="font-size: 12px; color: #b0b0b0;">שישי-שבת: סגור</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="container">
+        <h2 class="section-title">שאלות נפוצות</h2>
+        
+        <div class="faq-grid">
+            
+            <div class="faq-item">
+                <h3>🛒 איך מזמינים?</h3>
+                <p>
+                    פתחו את <a href="order.html" style="color: #00D9FF;">דף ההזמנות</a>, בחרו צבע וגודל, וסיימו את הקונפיגורציה בשלושה שלבים פשוטים.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>💰 מה זמן ההחזר?</h3>
+                <p>
+                    צבעים סטנדרטיים: 7-10 ימי עסקים. צבעים מותאמים (Pantone): 30-45 ימים.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>📦 כמה משקל?</h3>
+                <p>
+                    כל מכסה שוקל כ-35 גרם. 1,000 יחידות = ~35 ק"ג.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>🌍 האם משלחים בעולם?</h3>
+                <p>
+                    כן! משלחנו לעולם כולו דרך DHL ו-FedEx. דמי משלוח נוספים חלים.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>🔄 מה המדיניות החזרות?</h3>
+                <p>
+                    מוצרים מותאמים אישית לא ניתן להחזיר. לפגמי ייצור - החלפה בחינם בתוך 30 ימים.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>🎨 אני יכול לשנות את הדיזיין?</h3>
+                <p>
+                    כן! לפני תחילת הייצור. לאחר תחילה - לא ניתן לבטל או להחזיר כספי.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Live Chat Simulation -->
+<section class="chat-section">
+    <div class="container">
+        <h2 class="section-title">💬 צ'אט חי</h2>
+        <p style="text-align: center; color: #b0b0b0; margin-bottom: 2rem;">
+            לא ניתן לפתוח צ'אט חי כרגע. אנא השתמש בטופס למעלה או שלח מייל.
+        </p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Kat</h4>
+                <p>כוסיות סיליקון בטוחות.</p>
+            </div>
+            <div class="footer-section">
+                <h4>קישורים</h4>
+                <ul>
+                    <li><a href="index.html">בית</a></li>
+                    <li><a href="articles.html">מאמרים</a></li>
+            <li><a href="about.html">אודות</a></li>
+            <li><a href="order.html">הזמנה</a></li>
+                    <li><a href="policies.html">מדיניות</a></li>
+                    <li><a href="privacy.html">פרטיות</a></li>
+            <li><a href="disclaimer.html">הגבלת אחריות</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>צור קשר</h4>
+                <p>📧 kat.orders.il@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>™ Kat is a registered trademark application in Israel (#390926) | &copy; 2026 Kat - כל הזכויות שמורות</p>
+        </div>
+    <p class="tm-footer">™ Kat is a registered trademark application in Israel (Application #390926)</p>
+        </div>
+</footer>
+
+<script>
+    var KAT_FORM_KEY = 'c9277f73-d604-4b3d-bb5f-a75fd828484a';
+    function submitForm(event) {
+        event.preventDefault();
+        var form = document.querySelector('.contact-form');
+        var name = document.getElementById('name').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var phone = (document.getElementById('phone') || {}).value || '';
+        var subject = document.getElementById('subject').value;
+        var msgEl = document.getElementById('message');
+        var message = msgEl ? msgEl.value : '';
+        if (!name || !email || !subject) {
+            alert('⚠️ יש למלא את כל השדות');
+            return;
+        }
+        var btn = form.querySelector('button[type=submit]');
+        if (btn) btn.disabled = true;
+        var fail = function () {
+            alert('לא הצלחנו לשלוח את ההודעה. אנא כתבו לנו ישירות ל-kat.orders.il@gmail.com');
+            if (btn) btn.disabled = false;
+        };
+        if (KAT_FORM_KEY.indexOf('PASTE_') === 0) { fail(); return; }
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({
+                access_key: KAT_FORM_KEY,
+                subject: 'Kat website contact: ' + subject,
+                from_name: name,
+                replyto: email,
+                message: 'Name: ' + name + '\nEmail: ' + email + '\nPhone: ' + phone + '\nSubject: ' + subject + '\n\n' + message
+            })
+        }).then(function (r) { return r.json(); }).then(function (j) {
+            if (j && j.success) {
+                alert('✅ תודה ' + name + '! ההודעה נשלחה. נחזור אליך בקרוב לכתובת: ' + email);
+                form.reset();
+                if (btn) btn.disabled = false;
+            } else { fail(); }
+        }).catch(fail);
+    }
+</script>
+
+</body>
+</html>
